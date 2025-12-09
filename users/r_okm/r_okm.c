@@ -1,8 +1,8 @@
 #include QMK_KEYBOARD_H
-#include "r-okm.h"
+#include "r_okm.h"
 #include "sendstring_japanese.h"  // macro sendstring for jis keyboard マクロ文字列送信時に日本語キーボード設定での文字化け回避
 
-bool process_record_user_rokm(uint16_t keycode, keyrecord_t *record) {
+bool process_record_user_r_okm(uint16_t keycode, keyrecord_t *record) {
     static bool is_lalt_pressed = false;
     static bool is_lwin_pressed = false;
     bool result = false;

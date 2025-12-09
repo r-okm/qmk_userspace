@@ -23,7 +23,7 @@ enum layer_NUMBER {
 };
 
 #include QMK_KEYBOARD_H
-#include "r-okm.h"
+#include "r_okm.h"
 #include "keymap_japanese.h"  // For JP_ keycodes
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -65,5 +65,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    return process_record_user_rokm(keycode, record);
+    return process_record_user_r_okm(keycode, record);
 }
