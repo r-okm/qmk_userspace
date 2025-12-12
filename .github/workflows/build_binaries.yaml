@@ -8,13 +8,13 @@ permissions:
 jobs:
   build:
     name: 'QMK Userspace Build'
-    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@2136ded0cdc263e4cc0c2abced3ad4e2222cf1cb
+    uses: ../actions/qmk_userspace_build.yml
     with:
       qmk_repo: qmk/qmk_firmware
-      qmk_ref: 08e5fcfdf44c73fbbc8887b100fccd00006aa02e
+      qmk_ref: 08e5fcfdf44c73fbbc8887b100fccd00006aa02e # v0.31.1
 
   publish:
     name: 'QMK Userspace Publish'
-    uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@2136ded0cdc263e4cc0c2abced3ad4e2222cf1cb
+    uses: ../actions/qmk_userspace_publish.yml
     if: always() && !cancelled()
     needs: build
