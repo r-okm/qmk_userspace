@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ github.token }}
       - name: Build Userspace Firmware
-        uses: ./.github/actions/qmk_userspace_build.yml
+        uses: ./.github/actions/qmk_userspace_build
 
   publish:
     name: 'QMK Userspace Publish'
@@ -28,4 +28,4 @@ jobs:
         with:
           token: ${{ github.token }}
       - name: Publish firmware
-        uses: ./.github/actions/qmk_userspace_publish.yml
+        uses: ./.github/actions/qmk_userspace_publish
