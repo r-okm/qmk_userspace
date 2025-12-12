@@ -32,11 +32,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------|   |--------------------------------------------------------------------------------.
       _______,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,       KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,  KC_F13,  KC_F14,
   //|--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------+--------+--------+--------|
-  Z_TAB,KC_F12,LCTL(KC_W),LCTL(KC_PGUP),LCTL(KC_PGDN),LCS(KC_T),    KC_HOME,ESC_MHEN, _______,  KC_END,  JP_EQL, _______, _______, _______,
+  Z_TAB,KC_F12,LCTL(KC_W),LCTL(KC_PGUP),LCTL(KC_PGDN),LCS(KC_T),  KC_HOME,ESC_MHEN,_______, KC_END,  JP_EQL,  JP_EQL, _______, _______,
   //|--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------+--------+--------|
-  _______,LCTL(KC_A),LCTL(KC_S),LCTL(KC_D),LCTL(KC_F),LCTL(KC_G),  Z_LEFT,Z_DOWN,    Z_UP, Z_RIGHT, _______, JP_MINS, LALT(KC_ENT),
+  _______,LCTL(KC_A),LCTL(KC_S),LCTL(KC_D),LCTL(KC_F),LCTL(KC_G), Z_LEFT, Z_DOWN,    Z_UP, Z_RIGHT, _______, JP_MINS, LALT(KC_ENT),
   //|--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------+--------|
-  _______,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),LCTL(KC_V),LCTL(KC_B),  KC_BSPC,KC_DEL,JP_LBRC, JP_RBRC, ARROW_1, JP_CIRC, XXXXXXX,
+  _______,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),LCTL(KC_V),LCTL(KC_B), KC_BSPC,KC_DEL, JP_LBRC, JP_RBRC, ARROW_1, JP_CIRC, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------+--------|
                _______, _______, _______, _______,                  LALT(KC_ENT), _______, _______, _______
           //`---------------------------------------------|   |--------------------------------------------'
