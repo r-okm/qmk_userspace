@@ -19,6 +19,13 @@ jobs:
 
   publish:
     name: 'QMK Userspace Publish'
-    uses: ./.github/actions/qmk_userspace_publish.yml
+    runs-on: ubuntu-latest
     if: always() && !cancelled()
     needs: build
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          token: ${{ github.token }}
+      - name: Publish firmware
+        uses: ./.github/actions/qmk_userspace_publish.yml
