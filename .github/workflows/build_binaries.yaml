@@ -8,10 +8,14 @@ permissions:
 jobs:
   build:
     name: 'QMK Userspace Build'
-    uses: ./.github/actions/qmk_userspace_build.yml
-    with:
-      qmk_repo: qmk/qmk_firmware
-      qmk_ref: 08e5fcfdf44c73fbbc8887b100fccd00006aa02e # v0.31.1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          token: ${{ github.token }}
+      - name: Build Userspace Firmware
+        uses: ./.github/actions/qmk_userspace_build.yml
 
   publish:
     name: 'QMK Userspace Publish'
