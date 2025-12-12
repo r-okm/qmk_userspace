@@ -41,11 +41,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_FN] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      Z_TAB, KC_F12, LCTL(KC_W), LCTL(KC_PGUP), LCTL(KC_PGDN), LCS(KC_T),        KC_HOME, ESC_MHEN, XXXXXXX,  KC_END,  JP_EQL, XXXXXXX,
+      Z_TAB, KC_F12, LCTL(KC_W), LCTL(KC_PGUP), LCTL(KC_PGDN), LCS(KC_T),        KC_HOME, ESC_MHEN, XXXXXXX,  KC_END, JP_EQL,  JP_EQL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, LCTL(KC_A), LCTL(KC_S), LCTL(KC_D), LCTL(KC_F), LCTL(KC_G),       Z_LEFT,   Z_DOWN,    Z_UP, Z_RIGHT, JP_SCLN, JP_MINS,
+      _______, LCTL(KC_A), LCTL(KC_S), LCTL(KC_D), LCTL(KC_F), LCTL(KC_G),       Z_LEFT,   Z_DOWN,    Z_UP, Z_RIGHT, JP_SCLN, JP_MINS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), LCTL(KC_B),      KC_BSPC,  KC_DEL,  JP_LBRC, JP_RBRC, ARROW_1, LGUI_T(JP_CIRC),
+      _______, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), LCTL(KC_B),      KC_BSPC,  KC_DEL,  JP_LBRC, JP_RBRC, ARROW_1, LGUI_T(JP_CIRC),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                         _______,  _______,  _______,   LALT(KC_ENT), _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -55,9 +55,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KC_TAB,  KC_F11,  KC_F2,   KC_F3,   LALT(KC_F4), KC_F5,                    X_ONE,   X_TWO,   X_THREE, X_FOUR,  X_FIVE,  X_SIX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_COLN,
+      _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_COLN,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, JP_EXLM, JP_DQUO, JP_HASH, JP_DLR, JP_PERC,                      JP_AMPR, JP_QUOT, JP_LPRN, JP_RPRN, LSFT(JP_YEN), LGUI_T(JP_BSLS),
+      _______, JP_EXLM, JP_DQUO, JP_HASH, JP_DLR, JP_PERC,                      JP_AMPR, JP_QUOT, JP_LPRN, JP_RPRN, LSFT(JP_YEN), LGUI_T(JP_BSLS),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,     KC_ENT, _______, _______
                                       //`--------------------------'  `--------------------------'
