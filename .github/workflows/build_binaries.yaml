@@ -82,7 +82,6 @@ jobs:
         with:
           token: ${{ github.token }}
           name: QMK Firmware
-          tag_name: 'latest'
           fail_on_unmatched_files: false
           draft: false
           prerelease: false
