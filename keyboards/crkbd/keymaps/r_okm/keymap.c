@@ -20,6 +20,7 @@ enum layer_NUMBER {
     _QWERTY = 0,
     _FN,
     _NUMBER,
+    _DEVICE,
 };
 
 #include QMK_KEYBOARD_H
