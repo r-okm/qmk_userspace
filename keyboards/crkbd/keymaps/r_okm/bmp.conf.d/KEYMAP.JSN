@@ -2,10 +2,10 @@
 "keymap":"",
 "layout":"LAYOUT_split_3x6_3",
 "layers":
-[["LALT_T(KC_TAB)","KC_Q","KC_W","KC_E","KC_R","KC_T","KC_Y","KC_U","KC_I","KC_O","KC_P","JP_AT",
+[["KC_TAB","KC_Q","KC_W","KC_E","KC_R","KC_T","KC_Y","KC_U","KC_I","KC_O","KC_P","JP_AT",
 "KC_LCTL","KC_A","KC_S","KC_D","KC_F","KC_G","KC_H","KC_J","KC_K","KC_L","JP_SCLN","JP_COLN",
 "KC_LSFT","KC_Z","KC_X","KC_C","KC_V","KC_B","KC_N","KC_M","JP_COMM","JP_DOT","JP_SLSH","JP_BSLS",
-"JP_MHEN","MO(1)","KC_SPC","KC_ENT","MO(2)","JP_HENK"],
+"LALT_T(JP_MHEN)","MO(1)","KC_SPC","KC_ENT","MO(2)","JP_HENK"],
 
 ["Z_TAB","KC_F12","LCTL(KC_W)","LCTL(KC_PGUP)","LCTL(KC_PGDN)","LCS_T","KC_HOME","ESC_MHEN","KC_NO","KC_END","JP_EQL","JP_EQL",
 "KC_TRNS","LCTL(KC_A)","LCTL(KC_S)","LCTL(KC_D)","LCTL(KC_F)","LCTL(KC_G)","Z_LEFT","Z_DOWN","Z_UP","Z_RIGHT","JP_SCLN","JP_MINS",
