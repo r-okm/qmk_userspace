@@ -76,13 +76,21 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
 
+      - name: Set latest tag
+        if: always() && !cancelled()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git tag -f latest $GITHUB_SHA
+          git push origin latest --force
+
       - name: Generate Release
         uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
         if: always() && !cancelled()
         with:
           token: ${{ github.token }}
           name: QMK Firmware
-          tag_name: ${{ github.ref_name }}
+          tag_name: 'latest'
           fail_on_unmatched_files: false
           draft: false
           prerelease: false
