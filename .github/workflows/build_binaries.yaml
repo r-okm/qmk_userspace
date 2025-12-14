@@ -68,7 +68,7 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    if: always() && !cancelled()
+    if: github.ref_name == 'main' && !cancelled()
     needs: build
     steps:
       - name: Download binaries
