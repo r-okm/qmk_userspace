@@ -82,6 +82,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
+      - name: Checkout repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          token: ${{ github.token }}
+
+      - name: Set latest tag
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git tag -f latest $GITHUB_SHA
+          git push origin latest --force-with-lease
+
       - name: Generate Release
         uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
         if: always() && !cancelled()
