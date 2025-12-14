@@ -25,8 +25,8 @@ jobs:
         with:
           token: ${{ github.token }}
           path: qmk_firmware
-          repository: 'sekigon-gonnoc/qmk_firmware'
-          ref: 5fb8c7ea2f11525a9c10a026209b0877cc5f0edb # dev/ble_micro_pro
+          repository: 'qmk/qmk_firmware'
+          ref: 08e5fcfdf44c73fbbc8887b100fccd00006aa02e # v0.31.1
           submodules: recursive
 
       - name: Install QMK CLI dependencies
