@@ -10,7 +10,6 @@ env:
 
 jobs:
   build:
-    name: 'QMK Userspace Build'
     runs-on: ubuntu-latest
     container: ghcr.io/qmk/qmk_cli:latest
     steps:
@@ -67,7 +66,6 @@ jobs:
             *.uf2
 
   publish:
-    name: 'QMK Userspace Publish'
     runs-on: ubuntu-latest
     if: github.ref_name == 'main' && !cancelled()
     needs: build
