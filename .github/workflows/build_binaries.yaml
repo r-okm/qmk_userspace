@@ -7,6 +7,7 @@ permissions:
 
 env:
   ARTIFACT_NAME: Firmware
+  TAG_NAME: latest
 
 jobs:
   build:
@@ -76,13 +77,18 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
 
+      - name: Delete release
+        run: gh release delete ${{ env.TAG_NAME }} --cleanup-tag || true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
       - name: Generate Release
         uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
         if: always() && !cancelled()
         with:
           token: ${{ github.token }}
           name: QMK Firmware
-          tag_name: 'latest'
+          tag_name: ${{ env.TAG_NAME }}
           fail_on_unmatched_files: false
           draft: false
           prerelease: false
