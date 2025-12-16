@@ -6,7 +6,6 @@ permissions:
   contents: write
 
 env:
-  ARTIFACT_NAME: Firmware
   TAG_NAME: latest
 
 jobs:
@@ -14,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/qmk/qmk_cli:latest
     steps:
+      - name: Set short SHA
+        run: echo "SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+
       - name: Checkout Userspace
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
@@ -60,7 +62,7 @@ jobs:
         if: always() && !cancelled()
         continue-on-error: true
         with:
-          name: ${{ env.ARTIFACT_NAME }}
+          name: Firmware_${{ env.SHORT_SHA }}
           path: |
             *.bin
             *.hex
@@ -71,11 +73,14 @@ jobs:
     if: github.ref_name == 'main' && !cancelled()
     needs: build
     steps:
+      - name: Set short SHA
+        run: echo "SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_ENV
+
       - name: Download binaries
         if: always() && !cancelled()
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
-          name: ${{ env.ARTIFACT_NAME }}
+          name: Firmware_${{ env.SHORT_SHA }}
 
       - name: Delete release
         run: gh release delete ${{ env.TAG_NAME }} --cleanup-tag || true
