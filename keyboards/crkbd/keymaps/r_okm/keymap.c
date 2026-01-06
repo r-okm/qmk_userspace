@@ -78,5 +78,47 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    return process_record_user_r_okm(keycode, record);
+    static bool o_pressed = false;
+    static bool p_pressed = false;
+    static bool y_pressed = false;
+
+    switch (keycode) {
+        case KC_O:
+        case KC_END:
+        case X_FOUR:
+            o_pressed = record->event.pressed;
+            // もし既に P が押されているなら、この O 入力は捨てる
+            if (record->event.pressed && p_pressed) {
+                return false;
+            }
+            break;
+        case KC_P:
+        case JP_EQL:
+        case X_FIVE:
+            p_pressed = record->event.pressed;
+            // もし既に O が押されているなら、この P 入力は捨てる
+            if (record->event.pressed && o_pressed) {
+                return false;
+            }
+            break;
+
+        case KC_Y:
+            y_pressed = record->event.pressed;
+            break;
+        case KC_H:
+        case KC_N:
+        case KC_ENT:
+            // もし既に Y が押されているなら、この入力は捨てる
+            if (record->event.pressed && y_pressed) {
+                return false;
+            }
+            break;
+    }
+
+    bool continue_process = process_record_user_r_okm(keycode, record);
+    if (!continue_process) {
+        return false;
+    }
+
+    return true;
 }
