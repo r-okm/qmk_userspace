@@ -123,11 +123,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case CTL_T(KC_ESC):
             return true;
         default:
             return false;
+    }
+}
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case CTL_T(KC_ESC):
+            return 1;
+        default:
+            return TAPPING_TERM;
     }
 }

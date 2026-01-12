@@ -1,3 +1,4 @@
 {"tapping_term":{
-	"KC_NO":200
+	"KC_NO":200,
+	"CTL_T(KC_ESC)":1
 }}
