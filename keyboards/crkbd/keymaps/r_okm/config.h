@@ -5,5 +5,4 @@
 
 #define DEBOUNCE 15
 #define FLOW_TAP_TERM 150
-#define TAPPING_TERM 400
-#define HOLD_ON_OTHER_KEY_PRESS
+#define TAPPING_TERM 200
