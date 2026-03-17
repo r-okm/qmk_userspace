@@ -44,11 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       Z_TAB, KC_F12, LCTL(KC_W), LCTL(KC_PGUP), LCTL(KC_PGDN), LCS(KC_T),        KC_HOME, ESC_MHEN, XXXXXXX,  KC_END, JP_EQL,  JP_EQL,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, LCTL(KC_A), LCTL(KC_S), LCTL(KC_D), LCTL(KC_F), LCTL(KC_G),       Z_LEFT,   Z_DOWN,    Z_UP, Z_RIGHT, JP_SCLN, JP_MINS,
+      _______, LCTL(KC_1), LCTL(KC_2), LCTL(KC_3), LCTL(KC_4), LCTL(KC_5),       Z_LEFT,   Z_DOWN,    Z_UP, Z_RIGHT, JP_SCLN, JP_MINS,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), LCTL(KC_B),      KC_BSPC,  KC_DEL,  JP_LBRC, JP_RBRC, ARROW_1, JP_CIRC,
+      _______, LCTL(KC_6), LCTL(KC_7), LCTL(KC_8), LCTL(KC_9), LCTL(KC_0),      KC_BSPC,  KC_DEL,  JP_LBRC, JP_RBRC, ARROW_1, JP_CIRC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                      KC_LALT, _______, MO(_DEVICE),   LALT(KC_ENT), _______, KC_LGUI
+                                      KC_LALT, _______, MO(_DEVICE),    _______, _______, KC_LGUI
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, JP_EXLM, JP_DQUO, JP_HASH, JP_DLR, JP_PERC,                      JP_AMPR, JP_QUOT, JP_LPRN, JP_RPRN, LSFT(JP_YEN), JP_BSLS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______,  KC_SPC,     KC_ENT, _______, _______
+                                          _______, _______,  KC_SPC,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
