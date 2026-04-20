@@ -31,6 +31,11 @@ jobs:
           ref: 08e5fcfdf44c73fbbc8887b100fccd00006aa02e # v0.31.1
           submodules: recursive
 
+      - name: Overlay external keyboards into qmk_firmware
+        run: |
+          mkdir -p qmk_firmware/keyboards/salicylic_acid3
+          cp -r keyboards/salicylic_acid3/j67g qmk_firmware/keyboards/salicylic_acid3/
+
       - name: Install QMK CLI dependencies
         run: |
           echo '$PATH'

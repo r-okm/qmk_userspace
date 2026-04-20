@@ -2,6 +2,7 @@
     "userspace_version": "1.1",
     "build_targets": [
         ["salicylic_acid3/7skb/rev1", "r_okm"],
+        ["salicylic_acid3/j67g", "r_okm"],
         ["crkbd/rev1", "r_okm"]
     ]
 }
