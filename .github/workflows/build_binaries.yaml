@@ -31,6 +31,10 @@ jobs:
           ref: 08e5fcfdf44c73fbbc8887b100fccd00006aa02e # v0.31.1
           submodules: recursive
 
+      - name: Install out-of-tree keyboard definitions
+        run: |
+          ./bin/install_keyboards.sh qmk_firmware
+
       - name: Install QMK CLI dependencies
         run: |
           echo '$PATH'
