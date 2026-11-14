@@ -2,7 +2,7 @@
   "name": "j67g",
   "vendorProductId": 81323595,
   "macros": [
-    "{KC_MHEN}{KC_ESC}",
+    "{KC_ESC}{KC_MHEN}",
     "{KC_MINS}>",
     "",
     "",
