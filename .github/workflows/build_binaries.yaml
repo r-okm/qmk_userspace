@@ -1,6 +1,11 @@
 name: Build QMK firmware
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    # via/ holds VIA exports that are not built here
+    paths-ignore:
+      - 'via/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
