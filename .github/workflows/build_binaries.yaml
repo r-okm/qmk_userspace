@@ -88,9 +88,11 @@ jobs:
           name: Firmware_${{ env.SHORT_SHA }}
 
       - name: Delete release
-        run: gh release delete ${{ env.TAG_NAME }} --cleanup-tag || true
+        run: gh release delete ${{ env.TAG_NAME }} --cleanup-tag --yes || true
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          # The publish job has no checkout, so gh cannot infer the repository
+          GH_REPO: ${{ github.repository }}
 
       - name: Generate Release
         uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
